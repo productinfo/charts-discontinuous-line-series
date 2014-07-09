@@ -122,6 +122,7 @@
 
 -(SChartSeries *)sChart:(ShinobiChart *)chart seriesAtIndex:(NSInteger)index {
     SChartLineSeries *lineSeries = [[SChartLineSeries alloc] init];
+    lineSeries.crosshairEnabled = YES;
     return lineSeries;
 }
 
