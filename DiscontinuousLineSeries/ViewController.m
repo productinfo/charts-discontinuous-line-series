@@ -205,7 +205,17 @@
 }
 
 - (id<SChartData>)sChart:(ShinobiChart *)chart dataPointAtIndex:(NSInteger)dataIndex forSeriesAtIndex:(NSInteger)seriesIndex {
-    return _timeSeries[dataIndex];
+    SChartDataPoint *dataPoint = _timeSeries[dataIndex];
+    
+    NSDate *lowerBound = [self dateFromString:@"01-01-2009"];
+    NSDate *upperBound = [self dateFromString:@"01-01-2010"];
+    
+    if ([self isDate:dataPoint.xValue inRangeWithLowerBound:lowerBound upperBound:upperBound]) {
+        //then we want a gap, so nil the y value
+        dataPoint.yValue = nil;
+    }
+    
+    return dataPoint;
 }
 
 @end
