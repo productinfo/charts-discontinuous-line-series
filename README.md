@@ -5,6 +5,8 @@ ShinobiCharts (iOS) - Discontinuous Line Series
 
 This project demos the discontinuous line series feature introduced in ShinobiCharts (iOS) 2.7.0.
 
+![Screenshot](screenshot.png?raw=true)
+
 Building the project
 ------------------
 
