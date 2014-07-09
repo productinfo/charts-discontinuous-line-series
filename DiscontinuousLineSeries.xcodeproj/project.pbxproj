@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		166740CB196D4D6600B91C92 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166740CA196D4D6600B91C92 /* ShinobiCharts.framework */; };
 		7288C775178F0B0A003605E5 /* Apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 7288C774178F0B0A003605E5 /* Apple.png */; };
 		72934FBD1793EF890049A29D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72934FBC1793EF890049A29D /* CoreText.framework */; };
 		72934FBF1793EFE40049A29D /* Annotations.json in Resources */ = {isa = PBXBuildFile; fileRef = 72934FBE1793EFE40049A29D /* Annotations.json */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		166740CA196D4D6600B91C92 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = Library/Frameworks/ShinobiCharts.framework; sourceTree = DEVELOPER_DIR; };
 		7288C774178F0B0A003605E5 /* Apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apple.png; sourceTree = "<group>"; };
 		72934FBC1793EF890049A29D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		72934FBE1793EFE40049A29D /* Annotations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Annotations.json; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166740CB196D4D6600B91C92 /* ShinobiCharts.framework in Frameworks */,
 				86F69A3C1844B6A800B5BC77 /* libc++.dylib in Frameworks */,
 				72934FBD1793EF890049A29D /* CoreText.framework in Frameworks */,
 				72EA614B178C458B009B3DD4 /* QuartzCore.framework in Frameworks */,
@@ -96,6 +99,7 @@
 		72EA611F178C456A009B3DD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				166740CA196D4D6600B91C92 /* ShinobiCharts.framework */,
 				86F69A3B1844B6A800B5BC77 /* libc++.dylib */,
 				72934FBC1793EF890049A29D /* CoreText.framework */,
 				72EA614A178C458B009B3DD4 /* QuartzCore.framework */,
@@ -307,7 +311,9 @@
 		72EA6144178C456A009B3DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../..";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DiscontinuousLineSeries/DiscontinuousLineSeries-Prefix.pch";
 				INFOPLIST_FILE = "DiscontinuousLineSeries/DiscontinuousLineSeries-Info.plist";
@@ -320,7 +326,9 @@
 		72EA6145178C456A009B3DD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../..";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DiscontinuousLineSeries/DiscontinuousLineSeries-Prefix.pch";
 				INFOPLIST_FILE = "DiscontinuousLineSeries/DiscontinuousLineSeries-Info.plist";
