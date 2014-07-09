@@ -33,7 +33,7 @@
 		7288C774178F0B0A003605E5 /* Apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apple.png; sourceTree = "<group>"; };
 		72934FBC1793EF890049A29D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		72934FBE1793EFE40049A29D /* Annotations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Annotations.json; sourceTree = "<group>"; };
-		72934FC61793F83C0049A29D /* AppleStockPrices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = AppleStockPrices.json; path = ../../Common/AppleStockPrices.json; sourceTree = "<group>"; };
+		72934FC61793F83C0049A29D /* AppleStockPrices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = AppleStockPrices.json; path = AppleStockPrices.json; sourceTree = "<group>"; };
 		72EA611D178C456A009B3DD4 /* DiscontinuousLineSeries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscontinuousLineSeries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EA6120178C456A009B3DD4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72EA6122178C456A009B3DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
