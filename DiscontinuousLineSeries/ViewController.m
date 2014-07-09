@@ -184,6 +184,11 @@
     return dataPoint;
 }
 
+- (BOOL) isDate:(NSDate*)date inRangeWithLowerBound:(NSDate*)lowerBound upperBound:(NSDate*)upperBound {
+    return [date compare:lowerBound] == NSOrderedDescending
+    && [date compare:upperBound] == NSOrderedAscending;
+}
+
 #pragma mark - SChartDatasource methods
 
 - (NSInteger)numberOfSeriesInSChart:(ShinobiChart *)chart {
