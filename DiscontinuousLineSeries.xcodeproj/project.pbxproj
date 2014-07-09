@@ -10,7 +10,6 @@
 		166740CB196D4D6600B91C92 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166740CA196D4D6600B91C92 /* ShinobiCharts.framework */; };
 		7288C775178F0B0A003605E5 /* Apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 7288C774178F0B0A003605E5 /* Apple.png */; };
 		72934FBD1793EF890049A29D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72934FBC1793EF890049A29D /* CoreText.framework */; };
-		72934FBF1793EFE40049A29D /* Annotations.json in Resources */ = {isa = PBXBuildFile; fileRef = 72934FBE1793EFE40049A29D /* Annotations.json */; };
 		72934FC71793F83C0049A29D /* AppleStockPrices.json in Resources */ = {isa = PBXBuildFile; fileRef = 72934FC61793F83C0049A29D /* AppleStockPrices.json */; };
 		72EA6121178C456A009B3DD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EA6120178C456A009B3DD4 /* UIKit.framework */; };
 		72EA6123178C456A009B3DD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EA6122178C456A009B3DD4 /* Foundation.framework */; };
@@ -34,8 +33,7 @@
 		166740CA196D4D6600B91C92 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = Library/Frameworks/ShinobiCharts.framework; sourceTree = DEVELOPER_DIR; };
 		7288C774178F0B0A003605E5 /* Apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apple.png; sourceTree = "<group>"; };
 		72934FBC1793EF890049A29D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		72934FBE1793EFE40049A29D /* Annotations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Annotations.json; sourceTree = "<group>"; };
-		72934FC61793F83C0049A29D /* AppleStockPrices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = AppleStockPrices.json; path = AppleStockPrices.json; sourceTree = "<group>"; };
+		72934FC61793F83C0049A29D /* AppleStockPrices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppleStockPrices.json; sourceTree = "<group>"; };
 		72EA611D178C456A009B3DD4 /* DiscontinuousLineSeries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscontinuousLineSeries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EA6120178C456A009B3DD4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72EA6122178C456A009B3DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				72934FC61793F83C0049A29D /* AppleStockPrices.json */,
-				72934FBE1793EFE40049A29D /* Annotations.json */,
 				7288C774178F0B0A003605E5 /* Apple.png */,
 				72EA612F178C456A009B3DD4 /* AppDelegate.h */,
 				72EA6130178C456A009B3DD4 /* AppDelegate.m */,
@@ -201,7 +198,6 @@
 				72EA613D178C456A009B3DD4 /* ViewController_iPhone.xib in Resources */,
 				72EA6140178C456A009B3DD4 /* ViewController_iPad.xib in Resources */,
 				7288C775178F0B0A003605E5 /* Apple.png in Resources */,
-				72934FBF1793EFE40049A29D /* Annotations.json in Resources */,
 				72934FC71793F83C0049A29D /* AppleStockPrices.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,9 +307,7 @@
 		72EA6144178C456A009B3DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DiscontinuousLineSeries/DiscontinuousLineSeries-Prefix.pch";
 				INFOPLIST_FILE = "DiscontinuousLineSeries/DiscontinuousLineSeries-Info.plist";
@@ -326,9 +320,7 @@
 		72EA6145178C456A009B3DD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DiscontinuousLineSeries/DiscontinuousLineSeries-Prefix.pch";
 				INFOPLIST_FILE = "DiscontinuousLineSeries/DiscontinuousLineSeries-Info.plist";

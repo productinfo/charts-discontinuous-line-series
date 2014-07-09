@@ -28,14 +28,11 @@
 {
     ShinobiChart* _chart;
     NSMutableArray* _timeSeries;
-    BOOL _firstChartRender;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    _firstChartRender = YES;
     
     // Create the chart
     self.view.backgroundColor = [UIColor whiteColor];
@@ -92,89 +89,6 @@
         [_timeSeries addObject:datapoint];
     }
     
-}
-
-
-// adds date-markers to the chart
-- (void)addDateMarkerAnnotations {
-    // read the annotations from a JSON file
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"Annotations" ofType:@"json"];
-    NSData* json = [NSData dataWithContentsOfFile:filePath];
-    NSArray* data = [NSJSONSerialization JSONObjectWithData:json
-                                                    options:NSJSONReadingAllowFragments
-                                                      error:nil];
-    
-    // create a line and text annotation for each 'date' marker on the chart
-    CGAffineTransform rotationTransform = CGAffineTransformRotate(CGAffineTransformIdentity, -M_PI/2);
-    for (NSDictionary* jsonPoint in data) {
-        
-        // extract the data for this annotation
-        NSDate* date = [self dateFromString:jsonPoint[@"date"]];
-        NSNumber* yValue = jsonPoint[@"y-location"];
-        NSString* text = jsonPoint[@"annotation"];
-        
-        // add a vertical line annotation
-        SChartAnnotation *releaseAnnotation = [SChartAnnotation verticalLineAtPosition:date
-                                                                             withXAxis:_chart.xAxis
-                                                                              andYAxis:_chart.yAxis
-                                                                             withWidth:2.f
-                                                                             withColor:[UIColor colorWithWhite:0.7 alpha:1.0]];
-        releaseAnnotation.position = SChartAnnotationAboveData;
-        [_chart addAnnotation:releaseAnnotation];
-        
-        // add a text annotation
-        SChartAnnotation *releaseLabel = [SChartAnnotation annotationWithText:text
-                                                                      andFont:[UIFont systemFontOfSize:14.f]
-                                                                    withXAxis:_chart.xAxis
-                                                                     andYAxis:_chart.yAxis
-                                                                  atXPosition:date
-                                                                 andYPosition:yValue
-                                                                withTextColor:[UIColor blackColor]
-                                                          withBackgroundColor:_chart.plotAreaBackgroundColor];
-
-        // rotate the text by 90 degrees
-        releaseLabel.transform = rotationTransform;
-        releaseLabel.position = SChartAnnotationAboveData;
-        [_chart addAnnotation:releaseLabel];
-    }
-}
-
--(void)addCustomAnnotation {
-    
-    // create an annotation
-    SChartAnnotationZooming* an = [[SChartAnnotationZooming alloc] init];
-    an.xAxis = _chart.xAxis;
-    an.yAxis = _chart.yAxis;
-    
-    // set its location - using the data coordinate system
-    an.xValue = [self dateFromString:@"01-01-2009"];
-    an.yValue = @250;
-    
-    // pin all four corners of the annotation so that it stretches
-    an.xValueMax = [self dateFromString:@"01-01-2011"];
-    an.yValueMax = @550;
-    
-    // set bounds
-    an.bounds = CGRectMake(0,0,50,50);
-    an.position = SChartAnnotationBelowData;
-    
-    // Add some custom content to the annotation
-    UIImage* image = [UIImage imageNamed:@"Apple.png"];
-    UIImageView* imageView = [[UIImageView alloc] initWithImage:image];
-    imageView.alpha = 0.1f;
-    [an addSubview:imageView];
-    
-    // add to the chart
-    [_chart addAnnotation:an];
-}
-
-- (void)sChartRenderFinished:(ShinobiChart *)chart {
-    if (_firstChartRender) {
-        _firstChartRender = NO;
-        
-        [self addDateMarkerAnnotations];
-        [self addCustomAnnotation];
-    }
 }
 
 #pragma mark - utility methods
