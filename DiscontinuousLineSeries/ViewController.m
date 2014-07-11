@@ -64,6 +64,8 @@
     
     _chart.datasource = self;
     _chart.delegate = self;
+    
+    self.view.backgroundColor = _chart.backgroundColor;
         
 }
 
