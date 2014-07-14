@@ -1,7 +1,7 @@
 ShinobiCharts (iOS) - Discontinuous Line Series
 =====================
 
-This project demos the discontinuous line series feature introduced in ShinobiCharts (iOS) 2.7.0.
+This project demos the discontinuous line series feature introduced in ShinobiCharts (iOS) 2.7.0. There's an accompanying blog post [here](http://www.shinobicontrols.com/blog/posts/2014/07/14/individual-point-styling-discontinuous-line-series-in-shinobicharts-27).
 
 ![Screenshot](screenshot.png?raw=true)
 
