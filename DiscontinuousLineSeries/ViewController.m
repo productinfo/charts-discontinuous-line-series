@@ -2,7 +2,7 @@
 //  ViewController.m
 //  AddingAnnotations
 //
-//  Copyright 2012 Scott Logic
+//  Copyright 2014  Scott Logic
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@
     
     // Create the chart
     self.view.backgroundColor = [UIColor whiteColor];
-    CGFloat margin = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) ? 10.0 : 50.0;
+    CGFloat margin = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) ? 20.0 : 50.0;
     _chart = [[ShinobiChart alloc] initWithFrame:CGRectInset(self.view.bounds, margin, margin)];
     _chart.title = @"Apple Stock Price";
     
