@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A2E0B888-04D5-4C3A-B7D9-5C097BE1DAF8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DiscontinuousLineSeries</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D7D2B0AC-A2AC-4EDB-A9B2-5AA2B26485E5</key>
+		<string>https://github.com/alisonrclarke/charts-discontinuous-line-series.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DiscontinuousLineSeries.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D7D2B0AC-A2AC-4EDB-A9B2-5AA2B26485E5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/alisonrclarke/charts-discontinuous-line-series.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D7D2B0AC-A2AC-4EDB-A9B2-5AA2B26485E5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D7D2B0AC-A2AC-4EDB-A9B2-5AA2B26485E5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>charts-discontinuous-line-series</string>
+		</dict>
+	</array>
+</dict>
+</plist>
